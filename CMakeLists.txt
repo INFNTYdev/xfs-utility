@@ -21,3 +21,4 @@ include_directories("${PROJECT_SOURCE_DIR}/include")
 add_subdirectory(src)
 
 # Dev
+add_subdirectory(tests)
