@@ -5,7 +5,7 @@
 
 *about*
 <br/>
-The XFS (*Extensible File System Utility*) library consist of common tools necessary for dealing with file related operations. These tools are built into an ecosystem of compatible interconnecting components where relationships are present. The XFS ecosystem is designed to avoid the neglect of standard C++ types to increase usability and compatibility.
+The XFS (***Extensible File System Utility***) library consist of common tools necessary for dealing with file related operations. These tools are built into an ecosystem of compatible interconnecting components where relationships are present. The XFS ecosystem is designed open to avoid the neglect of standard C++ types which increases usability and compatibility.
 
 <br/>
 
