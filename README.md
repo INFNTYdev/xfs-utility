@@ -22,7 +22,7 @@ The XFS (***Extensible File System Utility***) library consist of common tools n
 
 <br/>
 
-The XFS system path suite provides safety and simplicty when dealing with strings that represent system paths. The encompassed ***PathT*** namespace is the backbone of path string parsing and can be used standalone with standard string objects. String optimization is an important factor to this project, all efforts are made to avoid string copying where possible.
+The XFS system path suite provides safety and simplicty when dealing with strings that represent system paths. The encompassed ***PathT*** namespace is the backbone of path string parsing and can be used standalone with standard string objects. String optimization is an important factor to this project, efforts are made to avoid string copying where possible.
 
 <br/>
 
