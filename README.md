@@ -19,7 +19,7 @@
 
 <br/>
 
-n/a
+The XFS system path suite provides safety and simplicty when dealing with strings that represent system paths.
 
 <br/>
 
