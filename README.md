@@ -33,6 +33,10 @@ The XFS system path suite provides safety and simplicty when dealing with string
 
 ## Entities
 ```cpp
+namespace PathT
+
+
+class SystemPath;
 ```
 
 <br/>
