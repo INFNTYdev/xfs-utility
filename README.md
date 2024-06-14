@@ -14,6 +14,7 @@ The XFS (*Extensible File System Utility*) library consist of common tools neces
 > ## 2. [System Path](#system-path)
 > ## 3. [Dynamic File Buffer](#dynamic-file-buffer)
 > ## 4. [System File](#system-file)
+> ## 5. [System Directory](#system-directory)
 
 <br/>
 
@@ -99,3 +100,28 @@ n/a
 
 <br/>
 <br/>
+
+# System Directory
+
+<br/>
+
+n/a
+
+<br/>
+
+> ## **Introduction**
+> n/a
+
+<br/>
+
+## Entities
+```cpp
+```
+
+<br/>
+
+---
+
+<br/>
+<br/>
+
