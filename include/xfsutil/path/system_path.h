@@ -79,6 +79,10 @@ public:
 	std::string_view findHighestCommonNode(const std::string& path_str) const;
 	// Returns highest shared node between system path and provided path if any
 	std::string_view findHighestCommonNode(const std::string_view& path_str_v) const;
+	// Remove specified number of navigation points from path
+	void decay(const size_t& count = size_t(1));
+	// Collapse path to root node
+	void decayToRoot();
 
 
 private:
