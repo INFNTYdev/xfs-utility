@@ -1,4 +1,4 @@
-# Extensible File System Utility (XFS)
+# Extensible File System Utility (XFS Utility)
 ###### INFINITY Systems, LLC. 2024
 
 <br/>
