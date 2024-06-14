@@ -161,7 +161,7 @@ size_t PathT::findPathTargetDelimiter(const std::string& path) noexcept
 	return position;
 }
 
-size_t PathT::getPathTargetCount(const std::string& path) noexcept
+size_t PathT::getPathNodeCount(const std::string& path) noexcept
 {
 	if (path.empty())
 		return size_t(0);
@@ -658,7 +658,7 @@ std::string_view PathT::getPathRoot(const std::string& path) noexcept
 	return std::string_view{ path.data(), stop };
 }
 
-bool PathT::sharesCommonTarget(const std::string& path1, const std::string& path2)
+bool PathT::sharesRootNode(const std::string& path1, const std::string& path2)
 {
 	if (path1.empty() || path2.empty())
 		return false;
@@ -675,7 +675,7 @@ bool PathT::sharesCommonTarget(const std::string& path1, const std::string& path
 	return (path1_nav[0] == path2_nav[0]);
 }
 
-std::string_view PathT::getHighestCommonTarget(const std::string& path1, const std::string& path2)
+std::string_view PathT::getHighestCommonNode(const std::string& path1, const std::string& path2)
 {
 	if (path1.empty() || path2.empty())
 		return EMPTY_STRING;

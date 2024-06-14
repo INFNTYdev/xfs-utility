@@ -3,6 +3,7 @@
 
 #include"xfsutil/buffer/buffer_page.h"
 #include"xfsutil/path/util/path_tool.h"
+#include"xfsutil/path/system_path.h"
 
 
 int main(size_t argc, char* argv[])
@@ -24,7 +25,7 @@ int main(size_t argc, char* argv[])
 	if (file.is_open())
 		file.close();
 
-	std::cout << PathT::getHighestCommonTarget(path, path) << std::endl;
+	std::cout << PathT::getHighestCommonNode(path, path) << std::endl;
 
 	return 0;
 }

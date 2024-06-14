@@ -1,6 +1,6 @@
 
-#ifndef XFS_PATH_STRING_TOOL_
-#define XFS_PATH_STRING_TOOL_
+#ifndef XFS_PATH_STRING_TOOL_H_
+#define XFS_PATH_STRING_TOOL_H_
 
 
 
@@ -59,7 +59,7 @@ namespace PathT {
 	// Returns index of provided paths target directory/file delimiter if any
 	size_t findPathTargetDelimiter(const std::string& path) noexcept;
 	// Returns total number of navigation points in path
-	size_t getPathTargetCount(const std::string& path) noexcept;
+	size_t getPathNodeCount(const std::string& path) noexcept;
 	// Returns provided paths file/directory name pointed to
 	std::string_view getPathEndingName(const std::string& path) noexcept;
 	// Returns provided paths ending extension if any
@@ -70,7 +70,7 @@ namespace PathT {
 	bool isPathString(FileSys path_type, const std::string& path) noexcept;
 	// Returns true if provided string follows file system file path rules
 	bool isFilePathString(FileSys path_type, const std::string& file_path) noexcept;
-	// Returns vector of provided paths navigation points to target
+	// Returns vector of provided paths nodes to target
 	void getPathVector(std::vector<std::string_view>& path_vec, const std::string& path);
 	// Returns concatenated path
 	std::string concatPaths(const std::string& front, const std::string& rear);
@@ -86,10 +86,10 @@ namespace PathT {
 	std::string_view getDecayedPath(const std::string& path, uint16_t count = 1) noexcept;
 	// Returns root directory of provided path
 	std::string_view getPathRoot(const std::string& path) noexcept;
-	// Returns true if provided paths share the same root target
-	bool sharesCommonTarget(const std::string& path1, const std::string& path2);
-	// Returns highest shared target name between provided paths if any
-	std::string_view getHighestCommonTarget(const std::string& path1, const std::string& path2);
+	// Returns true if provided paths share the same root node
+	bool sharesRootNode(const std::string& path1, const std::string& path2);
+	// Returns highest shared node between provided paths if any
+	std::string_view getHighestCommonNode(const std::string& path1, const std::string& path2);
 
 
 	// Extended byte character path tools
@@ -103,4 +103,4 @@ namespace PathT {
 
 
 
-#endif // XFS_PATH_STRING_TOOL_
+#endif // XFS_PATH_STRING_TOOL_H_
