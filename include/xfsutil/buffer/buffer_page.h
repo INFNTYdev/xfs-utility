@@ -11,7 +11,7 @@
 #include<fstream>
 
 
-// (ASCII) 1 byte character buffer page
+// (ASCII, ANSI, E-ASCII, UTF-8) 1 byte character buffer page
 class BufferPage {
 
 public:

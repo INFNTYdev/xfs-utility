@@ -2,13 +2,14 @@
 #include<iostream>
 
 #include"xfsutil/buffer/buffer_page.h"
+#include"xfsutil/path/util/path_tool.h"
 
 
 int main(size_t argc, char* argv[])
 {
 	//
 	const std::string path{
-		"F:\\InfinSys\\vc\\dynamic-file-buffer\\src\\buffer_dev.txt"
+		"F:\\InfinSys\\vc\\xfs-utility\\tests\\buffer_dev.txt"
 	};
 
 	std::ifstream file{ path };
@@ -22,6 +23,8 @@ int main(size_t argc, char* argv[])
 
 	if (file.is_open())
 		file.close();
+
+	std::cout << PathT::getHighestCommonTarget(path, path) << std::endl;
 
 	return 0;
 }
