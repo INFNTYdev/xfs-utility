@@ -43,7 +43,7 @@ The XFS system path suite provides safety and simplicty when dealing with string
 
 <br/>
 
-This project is designed to expose segments of files to memory in *'pages'*, a set interval of characters within a files contents. The core philosophy of this system is simple:
+The XFS file buffer suite is designed to expose segments of files to memory in *'pages'*, a set interval of characters within a files contents. The core philosophy of this system is simple:
 > ### 1) Minimize resource consumption
 > ### 2) Offer a friendly interface for developers
 
