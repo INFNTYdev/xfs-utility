@@ -9,7 +9,7 @@ The XFS (*Extensible File System Utility*) library consist of common tools neces
 
 <br/>
 
-> # 1. Table of Contents
+# 1. Table of Contents
 >
 > ## 2. [System Path](#system-path)
 > ## 3. [Dynamic File Buffer](#dynamic-file-buffer)
