@@ -4,10 +4,11 @@
 
 
 
+#include"xfsutil/path/sys_path_attr.h"
 #include"xfsutil/path/util/path_tool.h"
 
 
-// (ASCII, ANSI, E-ASCII, UTF-8) 8-bit character system path
+// (ASCII, ANSI, UTF-8, E-ASCII) 8-bit character system path
 class SystemPath {
 
 public:
@@ -25,18 +26,24 @@ public:
 
 	SystemPath& operator=(const SystemPath& rhs_path) noexcept;
 	SystemPath& operator=(SystemPath&& rhs_path) noexcept;
-	bool operator=(const std::string_view& rhs_str_v);
-	bool operator=(const std::string& rhs_str) noexcept;
-	bool operator=(std::string&& rhs_str) noexcept;
+	SystemPath& operator=(const std::string_view& rhs_str_v);
+	SystemPath& operator=(const std::string& rhs_str) noexcept;
+	SystemPath& operator=(std::string&& rhs_str) noexcept;
+	// Concatenate paths
 	SystemPath& operator+=(const SystemPath& rhs_path);
+	// Concatenate paths
 	SystemPath& operator+=(const std::string_view& rhs_str_v);
+	// Concatenate paths
 	SystemPath& operator+=(const std::string& rhs_str);
+	// Decay node from path
 	SystemPath& operator--() noexcept;
+	// Decay node from path
 	SystemPath operator--(int) noexcept;
 	bool operator==(const SystemPath& rhs_path) const noexcept;
 	bool operator==(const std::string_view& rhs_str_v) const;
 	bool operator==(const std::string& rhs_str) const noexcept;
-	std::string_view operator[](const size_t& target_index) const;
+	// Returns path node at provided index
+	std::string_view operator[](const size_t& node_index) const;
 
 	// Returns true if path contains no characters
 	bool empty() const noexcept;
@@ -45,7 +52,7 @@ public:
 	// Returns size of path in bytes
 	size_t size() const noexcept;
 	// Returns path intended file system
-	constexpr PathT::FileSys& pathType() const noexcept;
+	constexpr PathT::FileSys pathType() const noexcept;
 	// Returns true if path obeys file system path syntax
 	bool isLegalString() const noexcept;
 	// Returns true if path points to a file
@@ -53,7 +60,7 @@ public:
 	// Returns true if path points to a directory
 	bool isDirectoryPath() const noexcept;
 	// Returns total number of navigation points in path
-	size_t nodeCount() const noexcept;
+	const size_t& nodeCount() const noexcept;
 	// Returns path delimiting character
 	char getDelimiter() const noexcept;
 	// Returns path root directory
@@ -88,8 +95,9 @@ public:
 private:
 	PathT::FileSys m_fileSys;
 	std::string m_path;
-	bool m_isLegalStr;
-	bool m_isDirPath;
+	SysPathAttr m_attr;
+
+	void parsePath() noexcept;
 
 };
 

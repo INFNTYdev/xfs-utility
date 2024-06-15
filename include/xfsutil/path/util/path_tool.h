@@ -66,9 +66,9 @@ namespace PathT {
 	std::string_view getPathEndingExtension(const std::string& file_path) noexcept;
 	// Returns true if provided path contains an illegal character
 	bool hasIllegalPathCharacters(FileSys path_type, const std::string& path) noexcept;
-	// Returns true if provided string follows file system path rules
+	// Returns true if provided string follows file system path syntax
 	bool isPathString(FileSys path_type, const std::string& path) noexcept;
-	// Returns true if provided string follows file system file path rules
+	// Returns true if provided string follows file system file path syntax
 	bool isFilePathString(FileSys path_type, const std::string& file_path) noexcept;
 	// Returns vector of provided paths nodes to target
 	void getPathVector(std::vector<std::string_view>& path_vec, const std::string& path);

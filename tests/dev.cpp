@@ -25,7 +25,11 @@ int main(size_t argc, char* argv[])
 	if (file.is_open())
 		file.close();
 
-	std::cout << PathT::getHighestCommonNode(path, path) << std::endl;
+
+	//
+	SystemPath tPath{ PathT::WINDOWS, path };
+
+	std::cout << '\n' << tPath << std::endl;
 
 	return 0;
 }
