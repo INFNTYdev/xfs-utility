@@ -108,7 +108,7 @@ SystemPath& SystemPath::operator=(SystemPath&& rhs_path) noexcept
 
 SystemPath& SystemPath::operator=(const std::string_view& rhs_str_v)
 {
-	if (this->m_path == rhs_str_v)
+	if (this->m_path == std::string{ rhs_str_v })
 		return *this;
 
 	this->m_path = rhs_str_v;
@@ -186,7 +186,7 @@ bool SystemPath::operator==(const SystemPath& rhs_path) const noexcept
 
 bool SystemPath::operator==(const std::string_view& rhs_str_v) const
 {
-	return (this->m_path == rhs_str_v);
+	return (this->m_path == std::string{ rhs_str_v });
 }
 
 bool SystemPath::operator==(const std::string& rhs_str) const noexcept
