@@ -26,21 +26,6 @@ The XFS system path suite provides safety and simplicty when dealing with string
 
 <br/>
 
-> ## **Introduction**
-> n/a
-
-<br/>
-
-## Entities
-```cpp
-namespace PathT
-
-
-class SystemPath;
-```
-
-<br/>
-
 ---
 
 <br/>
@@ -65,17 +50,6 @@ There are two primary classes presented in this project, ***FileInputBuffer*** a
 
 <br/>
 
-## Entities
-```cpp
-class BufferPage;
-
-class FileInputBuffer;
-
-class FileOutputBuffer;
-```
-
-<br/>
-
 ---
 
 <br/>
@@ -89,17 +63,6 @@ n/a
 
 <br/>
 
-> ## **Introduction**
-> n/a
-
-<br/>
-
-## Entities
-```cpp
-```
-
-<br/>
-
 ---
 
 <br/>
@@ -110,17 +73,6 @@ n/a
 <br/>
 
 n/a
-
-<br/>
-
-> ## **Introduction**
-> n/a
-
-<br/>
-
-## Entities
-```cpp
-```
 
 <br/>
 
