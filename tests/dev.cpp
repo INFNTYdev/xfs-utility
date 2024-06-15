@@ -2,13 +2,15 @@
 #include<iostream>
 
 #include"xfsutil/buffer/buffer_page.h"
+#include"xfsutil/path/util/path_tool.h"
+#include"xfsutil/path/system_path.h"
 
 
 int main(size_t argc, char* argv[])
 {
 	//
 	const std::string path{
-		"F:\\InfinSys\\vc\\dynamic-file-buffer\\src\\buffer_dev.txt"
+		"F:\\InfinSys\\vc\\xfs-utility\\tests\\buffer_dev.txt"
 	};
 
 	std::ifstream file{ path };
@@ -22,6 +24,12 @@ int main(size_t argc, char* argv[])
 
 	if (file.is_open())
 		file.close();
+
+
+	//
+	SystemPath tPath{ PathT::WINDOWS, path };
+
+	std::cout << '\n' << tPath << std::endl;
 
 	return 0;
 }
