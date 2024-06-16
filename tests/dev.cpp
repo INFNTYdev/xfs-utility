@@ -30,7 +30,7 @@ int main(size_t argc, char* argv[])
 	//
 	SystemPath tPath{ PathT::WINDOWS, path };
 
-	std::cout << '\n' << tPath << std::endl;
+	std::cout << '\n' << DBuff::Char::SIZE_DEV << std::endl;
 
 	return 0;
 }

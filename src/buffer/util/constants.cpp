@@ -4,8 +4,8 @@
 
 // DBuff::Limit : Constants
 
-const uint8_t DBuff::Limit::MIN_ALLOC_SIZE{ 2 };
-const uint32_t DBuff::Limit::MAX_ALLOC_SIZE{ 1'073'741'824 };
+const uint8_t DBuff::Limit::MIN_ALLOC_BYTES{ 2 };
+const uint32_t DBuff::Limit::MAX_ALLOC_BYTES{ 1'073'741'824 };
 
 
 
@@ -23,6 +23,9 @@ const uint32_t DBuff::Char::SIZE_512KB{ 524'288 };
 const uint32_t DBuff::Char::SIZE_1MB{ 1'048'576 };
 const uint32_t DBuff::Char::SIZE_2MB{ 2'097'152 };
 const uint32_t DBuff::Char::SIZE_4MB{ 4'194'304 };
+const uint32_t DBuff::Char::SIZE_8MB{ 8'388'608 };
+const uint32_t DBuff::Char::SIZE_16MB{ 16'777'216 };
+const uint32_t DBuff::Char::SIZE_32MB{ 33'554'432 };
 
 
 
@@ -40,6 +43,9 @@ const uint32_t DBuff::Wchar::SIZE_512KB{ 262'144 };
 const uint32_t DBuff::Wchar::SIZE_1MB{ 524'288 };
 const uint32_t DBuff::Wchar::SIZE_2MB{ 1'048'576 };
 const uint32_t DBuff::Wchar::SIZE_4MB{ 2'097'152 };
+const uint32_t DBuff::Wchar::SIZE_8MB{ 4'194'304 };
+const uint32_t DBuff::Wchar::SIZE_16MB{ 8'388'608 };
+const uint32_t DBuff::Wchar::SIZE_32MB{ 16'777'216 };
 
 
 
@@ -57,3 +63,6 @@ const uint32_t DBuff::UWchar::SIZE_512KB{ 131'072 };
 const uint32_t DBuff::UWchar::SIZE_1MB{ 262'144 };
 const uint32_t DBuff::UWchar::SIZE_2MB{ 524'288 };
 const uint32_t DBuff::UWchar::SIZE_4MB{ 1'048'576 };
+const uint32_t DBuff::UWchar::SIZE_8MB{ 2'097'152 };
+const uint32_t DBuff::UWchar::SIZE_16MB{ 4'194'304 };
+const uint32_t DBuff::UWchar::SIZE_32MB{ 8'388'608 };

@@ -15,8 +15,8 @@ namespace DBuff
 	namespace Limit
 	{
 
-		extern const uint8_t MIN_ALLOC_SIZE;// Minimum character memory allocation in bytes
-		extern const uint32_t MAX_ALLOC_SIZE;// Maximum character memory allocation 1,073,741,824 bytes = 1GB
+		extern const uint8_t MIN_ALLOC_BYTES;// Minimum character memory allocation 2 bytes
+		extern const uint32_t MAX_ALLOC_BYTES;// Maximum character memory allocation 1,073,741,824 bytes = 1GB
 
 	}
 
@@ -37,6 +37,9 @@ namespace DBuff
 		extern const uint32_t SIZE_1MB;// 1,048,576 1 byte characters = 1MB
 		extern const uint32_t SIZE_2MB;// 2,097,152 1 byte characters = 2MB
 		extern const uint32_t SIZE_4MB;// 4,194,304 1 byte characters = 4MB
+		extern const uint32_t SIZE_8MB;// 8,388,608 1 byte characters = 8MB
+		extern const uint32_t SIZE_16MB;// 16,777,216 1 byte characters = 16MB
+		extern const uint32_t SIZE_32MB;// 33,554,432 1 byte characters = 32MB
 
 	}
 
@@ -56,6 +59,9 @@ namespace DBuff
 		extern const uint32_t SIZE_1MB;// 524,288 2 byte characters = 1MB
 		extern const uint32_t SIZE_2MB;// 1,048,576 2 byte characters = 2MB
 		extern const uint32_t SIZE_4MB;// 2,097,152 2 byte characters = 4MB
+		extern const uint32_t SIZE_8MB;// 4,194,304 2 byte characters = 8MB
+		extern const uint32_t SIZE_16MB;// 8,388,608 2 byte characters = 16MB
+		extern const uint32_t SIZE_32MB;// 16,777,216 2 byte characters = 32MB
 
 	}
 
@@ -74,6 +80,9 @@ namespace DBuff
 		extern const uint32_t SIZE_1MB;// 262,144 4 byte characters = 1MB
 		extern const uint32_t SIZE_2MB;// 524,288 4 byte characters = 2MB
 		extern const uint32_t SIZE_4MB;// 1,048,576 4 byte characters = 4MB
+		extern const uint32_t SIZE_8MB;// 2,097,152 4 byte characters = 8MB
+		extern const uint32_t SIZE_16MB;// 4,194,304 4 byte characters = 16MB
+		extern const uint32_t SIZE_32MB;// 8,388,608 4 byte characters = 32MB
 
 	}
 
