@@ -10,6 +10,7 @@ add_library(
 
 add_library(
 	xfs_buffer
+	"buffer/util/constants.cpp"
 	"buffer/buffer_page.cpp"
 )
 

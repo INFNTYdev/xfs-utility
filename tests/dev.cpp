@@ -4,6 +4,7 @@
 #include"xfsutil/buffer/buffer_page.h"
 #include"xfsutil/path/util/path_tool.h"
 #include"xfsutil/path/system_path.h"
+#include"xfsutil/buffer/util/constants.h"
 
 
 int main(size_t argc, char* argv[])
