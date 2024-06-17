@@ -22,20 +22,16 @@ void pageStateOut(const IBufferPage<T>& page)
 }
 
 
+// Maybe?
+
+using BufferPage = IBufferPage<char>;// ASCII, ANSI, E-ASCII (8-bit encoding)
+using BufferPage_u8 = IBufferPage<char8_t>;// ASCII, ANSI, E-ASCII, UTF-8 (8-bit encoding)
+using BufferPage_u16 = IBufferPage<char16_t>;// UTF-16 (16-bit encoding)
+using BufferPage_u32 = IBufferPage<char32_t>;// UTF-32 (32-bit encoding)
+
+
 int main(size_t argc, char* argv[])
 {
-	/*
-	* 
-	* char			| ASCII, ANSI, E-ASCII
-	* char8_t		| ASCII, ANSI, E-ASCII, UTF-8
-	* char16_t		| UTF-16
-	* char32_t		| UTF-32
-	* 
-	*/
-
-
-	// There is a lot of nonsense everywhere, kindly ignore it
-
 	// -> The use of char16_t causes overwhelming amount of compiler warnings
 	// -> The same is likely to be said for char32_t; review warnings for meaning!
 	// -> If using a higher char size, std::basic_EVERYTHING_U_NAME_IT becomes the story
