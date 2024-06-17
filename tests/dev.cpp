@@ -38,6 +38,7 @@ int main(size_t argc, char* argv[])
 	// -> The use of char16_t causes overwhelming amount of compiler warnings
 	// -> The same is likely to be said for char32_t; review warnings for meaning!
 	// -> If using a higher char size, std::basic_EVERYTHING_U_NAME_IT becomes the story
+	// -> The buffer pages appear to be working correctly SO FAR
 
 
 	//
