@@ -11,6 +11,7 @@ void pageStateOut(const IBufferPage<T>& page)
 	std::cout
 		<< std::boolalpha
 		<< "\n- PAGE STATE -"
+		<< "\nIndex   : " << page.pageIndex
 		<< "\nStart   : " << page.startPos
 		<< "\nStop    : " << page.stop()
 		<< "\nLength  : " << page.pageLength()
@@ -39,6 +40,7 @@ int main(size_t argc, char* argv[])
 	// -> The same is likely to be said for char32_t; review warnings for meaning!
 	// -> If using a higher char size, std::basic_EVERYTHING_U_NAME_IT becomes the story
 	// -> The buffer pages appear to be working correctly SO FAR
+	// -> Need to learn more about dealing with wider chars
 
 
 	//
@@ -47,24 +49,29 @@ int main(size_t argc, char* argv[])
 	};
 
 	std::ifstream file{ path };
-	std::basic_ifstream<char16_t, std::char_traits<char16_t>> file16_b{ path };
 
 	
 	//
-	IBufferPage<char> test8_bit{ 4, 0, 0 };
-	IBufferPage<char16_t> test16_bit{ 4, 1, (test8_bit.stop() + 1) };
+	IBufferPage<char> page1{ 4, 0, 0 };
+	IBufferPage<char> page2{ 4, 1, (page1.stop() + 1) };
+	IBufferPage<char> page3{ 4, 2, (page2.stop() + 1) };
 
-	bool succ_8bit = test8_bit.cacheContents(file);
-	bool succ_16bit = test16_bit.cacheContents(file16_b);
+	bool succ = page1.cacheContents(file);
+	succ = page2.cacheContents(file);
+	succ = page3.cacheContents(file);
 
-	std::string regularString{ test8_bit.contents() };
-	std::basic_string<char16_t> n16bitString{ test16_bit.contents() };
+	std::cout << "\nOUTPUT: "
+		<< page1.contents()
+		<< page2.contents()
+		<< page3.contents()
+		<< std::endl;
 
-	std::cout << test8_bit.contents();
-	std::cout << reinterpret_cast<const char*>(n16bitString.data());
+	pageStateOut(page1);
+	pageStateOut(page2);
+	pageStateOut(page3);
 
-	pageStateOut(test8_bit);
-	pageStateOut(test16_bit);
+	if (file.is_open())
+		file.close();
 
 	return 0;
 }
