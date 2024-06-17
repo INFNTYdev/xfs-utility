@@ -15,8 +15,10 @@ namespace DBuff
 	namespace Limit
 	{
 
+		extern const uint8_t MIN_CHAR_SPACE;// Minimum page character space required
 		extern const uint8_t MIN_ALLOC_BYTES;// Minimum character memory allocation 2 bytes
 		extern const uint32_t MAX_ALLOC_BYTES;// Maximum character memory allocation 1,073,741,824 bytes = 1GB
+		extern const uint32_t MAX_PAGE_BYTES;// Maximum character memory allocation for page 536,870,912 bytes = 512MB
 
 	}
 

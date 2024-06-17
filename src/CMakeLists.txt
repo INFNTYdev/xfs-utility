@@ -11,7 +11,7 @@ add_library(
 add_library(
 	xfs_buffer
 	"buffer/util/constants.cpp"
-	"buffer/interface/buffer_page_i.cpp"
+	
 )
 
 target_compile_features(xfs_buffer PUBLIC cxx_std_20)

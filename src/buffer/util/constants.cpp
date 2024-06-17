@@ -4,8 +4,10 @@
 
 // DBuff::Limit : Constants
 
+const uint8_t DBuff::Limit::MIN_CHAR_SPACE{ 2 };
 const uint8_t DBuff::Limit::MIN_ALLOC_BYTES{ 2 };
 const uint32_t DBuff::Limit::MAX_ALLOC_BYTES{ 1'073'741'824 };
+const uint32_t DBuff::Limit::MAX_PAGE_BYTES{ 536'870'912 };
 
 
 
