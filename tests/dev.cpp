@@ -22,7 +22,8 @@ void pageStateOut(const IBufferPage<T>& page)
 }
 
 
-// Maybe?
+// Maybe? (These could go in the DBuff namespace)
+// That namespace needs a better name, the file as well
 
 using BufferPage = IBufferPage<char>;// ASCII, ANSI, E-ASCII (8-bit encoding)
 using BufferPage_u8 = IBufferPage<char8_t>;// ASCII, ANSI, E-ASCII, UTF-8 (8-bit encoding)
