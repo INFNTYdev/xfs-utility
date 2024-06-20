@@ -4,7 +4,7 @@
 
 
 
-#include"xfsutil/buffer/interface/buffer_page_i.h"
+#include"xfsutil/buffer/page/interface/buffer_page_i.h"
 
 
 // Templated output buffer page interface
